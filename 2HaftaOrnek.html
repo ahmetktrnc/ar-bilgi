@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script type="text/javascript">
+
+            let ogrenciler = []; 
+
+            function Ekle()
+            {
+                 let deger = document.getElementById("ekle").value;
+
+                 ogrenciler.push(deger);
+
+                 alert(ogrenciler);
+            }
+
+            function Sil()
+            {
+                let deger = document.getElementById("sil").value;
+                
+                let indeks = ogrenciler.indexOf(deger); 
+                if(indeks != -1)
+                {
+                    ogrenciler.splice(indeks, 1); 
+                }
+
+                alert(ogrenciler);
+            }
+      
+
+            function Guncelle()
+            {
+                let deger2 = document.getElementById("ogrencibul").value;
+                let deger = document.getElementById("guncelle").value;
+                
+                
+                let indeks = ogrenciler.indexOf(deger2); 
+
+if (indeks != -1)
+{
+    if(deger != "")
+{
+    ogrenciler[indeks] =deger ;
+    alert(ogrenciler);
+}
+else{
+    alert("yeni isim boş olamaz ")
+}
+
+
+}
+else
+
+{
+    alert("Böyle bir öğrenci yok")
+               
+            }
+        }
+        </script>
+
+
+    </head>
+    <body>
+        <input type="text" name="ogrenci" id="ekle"placeholder=" öğrenci adını girin"><br><br>
+        <button type="submit" onclick="Ekle()"> Öğrenci Ekle </button><br><br>
+        <input type="text" name="ogrenci" id="sil"placeholder=" öğrenci adını girin"><br><br>
+           <button type="submit" onclick="Sil()">Öğrenci Sil</button><br><br>
+           <input type="text" name="ogrenci" id="ogrencibul" placeholder="eski öğrenci adını girin"><br><br>
+           <input type="text" name="ogrenci2" id="guncelle"placeholder="yeni öğrenci adını girin"><br><br>
+
+           <button type="submit" onclick="Guncelle()">Öğrenci Güncelle</button><br><br>
+        
+
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script type="text/javascript">
+
+            function OyKontrolu()
+            {
+                let yas = document.getElementById("age").value;
+
+                let yas2 = parseInt(yas);//Number(yas);
+
+                if(yas2 >= 18)
+                {
+                    alert("Oy Verebilirsiniz :)");
+                }
+                else
+                {
+                    alert("Oy Veremezsiniz :(");
+                }
+
+            }
+
+            // Diziler(Arrays)
+
+            // Js'de diziler içerisinde aynı türden veya farklı türden verileri bir arada tutan yapılara denir.
+
+            let days = ["pazartesi", "salı", "çarşamba", "perşembe", "cuma", "cumartesi", "pazar"]; 
+            // 7 elemanlı bir dizi 
+            // 0(ilk elemanın indeksi), 6(sonuncu elemanın indeksi)
+
+            //console.log(days[5]);
+            
+            // for(let i = 0; i < days.length ; i++)
+            // {
+            //     console.log(days[i]);
+            // }
+
+            // While
+            // let eren = 0;
+            // while(eren < days.length)
+            // {
+            //     console.log(days[eren]);
+            //     eren++;
+            // }
+
+            // // For in
+            // for(let indeksNo in days)
+            // {
+            //     console.log(days[indeksNo]);
+            // }
+
+            // Not: Bir dizi üzerinden ForEach döngüsü dahili olarak aşağıdaki yazım olacak şekilde kullanabiliriz. Kod içerisinde day ifadesi bizim bu kod bazında oluşturduğumuz bir değişkendir
+            days.forEach(function(day) 
+            {
+                console.log(day);
+            });
+
+            days[3] = "Thursday"; // Dizinin 3.indeksine değer atadık
+
+            //console.log(days);
+
+            let aylar = ["ocak", "şubat"];
+
+            // Dizinin içerisine değer ekleme
+            aylar[2] = "mart"; // dizi içerisine olmayan bir indeksi değeriyle beraber ekleyebiliriz.
+
+            //console.log(aylar);
+
+            // push : Dizinin sonuna eleman ekler
+            aylar.push("nisan");
+            
+
+            // unshift : Dizinin en başına eleman ekler.
+            aylar.unshift("ağustos");
+            
+            // pop : Dizinin en son elemanını siler
+            aylar.pop("mart");
+            
+            // shift : Dizinin başındaki elemanı siler
+            aylar.shift("şubat");
+            
+            // reverse : Diziyi tersine çevirir.
+            aylar.reverse();
+            //console.log(aylar);
+
+            // sort : Diziyi değerine göre sıralar.
+            aylar.sort();
+            
+            // indexOf : Dizinin belirtilen değerinin indeks numarasını bize verir. Belirtilen değer yoksa geriye -1 döner
+            aylar.indexOf("aralık");
+            //console.log(aylar.indexOf("aralık"));
+
+            let sayilar = [12,56,14,19,30,58,34];
+            // filter : Dizinin içerisinde belirtilen koşulu sağlayan değerleri bize verir.
+            console.log(sayilar.filter(x => x < 20));
+
+            // includes : Dizinin içerisinde belirtilen değer varsa true yoksa geriye false döner
+            console.log(aylar.includes("kasım"));
+
+            
+        </script>
+
+    </head>
+    <body>
+        
+        <form action="#">
+            <input type="text" name="Yas" id="age"><br><br>
+            <input type="submit" value="Kontrol" onclick="OyKontrolu()">
+        </form>
+
+
+    </body>
+</html>
